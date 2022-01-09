@@ -41,4 +41,5 @@ char *get_from_fun_stack ( void )
     fprintf(stderr, "Stack underflow - na stosie niczego nie ma!");
     return NULL;
   }
+  
 }
