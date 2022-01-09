@@ -4,8 +4,7 @@
 #include "store.h"
 
 
-int main (int argc, char** argv)  
-{
+int main (int argc, char** argv) {
   for(int i =1; i<argc;i++)  {
     analizatorSkladni(argv[i]);
   }
