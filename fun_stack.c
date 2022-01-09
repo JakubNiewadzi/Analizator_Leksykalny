@@ -15,7 +15,7 @@ int top_of_funstack ( void )
     return par_level_stack[top];
   }
   else{
-    //fprintf(stderr, "Stack underflow 1 - na stosie niczego nie ma!");
+    fprintf(stderr, "Stack underflow - na stosie niczego nie ma!");
     return 903824;
   }
 }
