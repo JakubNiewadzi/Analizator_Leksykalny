@@ -1,3 +1,12 @@
 {
-  "files": {}
+  "files": {
+    "stack_test.c": [
+      {
+        "id": "c74955d5-5123-4778-9f45-005268d4bd39",
+        "line": 16,
+        "version": 965,
+        "index": 362
+      }
+    ]
+  }
 }
