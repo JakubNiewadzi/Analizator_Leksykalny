@@ -9,8 +9,7 @@ int top=-1;
 char* fun_stack[size];
 int par_level_stack[size];
 
-int top_of_funstack ( void )
-{
+int top_of_funstack ( void ) {
   if(top>-1){
     return par_level_stack[top];
   }
@@ -20,8 +19,7 @@ int top_of_funstack ( void )
   }
 }
 
-void put_on_fun_stack ( int par_level, char *funame )
-{
+void put_on_fun_stack ( int par_level, char *funame ) {
   if(top<size){
     top++;
     fun_stack[top]=malloc(strlen(funame)*sizeof(char));
@@ -32,8 +30,7 @@ void put_on_fun_stack ( int par_level, char *funame )
   }
 }
 
-char *get_from_fun_stack ( void )
-{
+char *get_from_fun_stack ( void ) {
   if(top>-1){
     top--;
     return fun_stack[top+1];

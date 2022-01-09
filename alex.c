@@ -10,14 +10,12 @@ static char ident[256];
 static FILE *ci= NULL;
 static int gc;
 
-void    alex_init4file( FILE *in ) 
-{
+void    alex_init4file( FILE *in ) {
    ln= 1;
    ci= in;
 }
 
-int isKeyword(char* ident)
-{
+int isKeyword(char* ident) {
   if(strcmp(ident, "if")==0)
     return 0;
   else if(strcmp(ident, "while")==0)
@@ -71,8 +69,7 @@ int isKeyword(char* ident)
   }
 }
 
-lexem_t alex_nextLexem( void ) 
-{
+lexem_t alex_nextLexem( void )  {
   int c;
   while( (c= fgetc(ci)) != EOF ) {
     //printf("%c", c);
@@ -127,20 +124,17 @@ lexem_t alex_nextLexem( void )
   return EOFILE;
 }
 
-char *  alex_ident( void ) 
-{
+char *  alex_ident( void ) {
    return ident;
 }
 
 
-lexem_t alex_next_ident( void ) 
-{
+lexem_t alex_next_ident( void )  {
   int c =gc;
   while(c==' '|| c=='\n'){
     //printf("%c", c);
     if(c=='\n'){
       ln++;
-      break;
     }
     c= fgetc(ci);
     continue;
@@ -162,8 +156,7 @@ lexem_t alex_next_ident( void )
    }
 }
 
-int     alex_getLN() 
-{
+int     alex_getLN() {
         return ln;
 }
 

@@ -8,8 +8,7 @@
 fun_finder arr[100];
 int current=0;
 
-void store_add_def(char *get_from_fun_stack(), int alex_getLN(), char* inpname)
-{
+void store_add_def(char *get_from_fun_stack(), int alex_getLN(), char* inpname) {
   arr[current].type=malloc(10*sizeof(char));
   arr[current].fun_name=malloc(100*sizeof(char));
   arr[current].inpname=malloc(100*sizeof(char));
@@ -19,8 +18,7 @@ void store_add_def(char *get_from_fun_stack(), int alex_getLN(), char* inpname)
   arr[current].line=alex_getLN();
   current++;
 }
-void store_add_proto(char *get_from_fun_stack(), int alex_getLN(), char* inpname)
-{
+void store_add_proto(char *get_from_fun_stack(), int alex_getLN(), char* inpname) {
   arr[current].type=malloc(10*sizeof(char));
   arr[current].fun_name=malloc(100*sizeof(char));
   arr[current].inpname=malloc(100*sizeof(char));
@@ -30,8 +28,7 @@ void store_add_proto(char *get_from_fun_stack(), int alex_getLN(), char* inpname
   arr[current].line=alex_getLN();
   current++;
 }
-void store_add_call(char *get_from_fun_stack(), int alex_getLN(), char* inpname)
-{
+void store_add_call(char *get_from_fun_stack(), int alex_getLN(), char* inpname) {
   arr[current].type=malloc(10*sizeof(char));
   arr[current].fun_name=malloc(100*sizeof(char));
   arr[current].inpname=malloc(100*sizeof(char));
@@ -42,8 +39,7 @@ void store_add_call(char *get_from_fun_stack(), int alex_getLN(), char* inpname)
   current++;
 }
 
-void write()
-{
+void write() {
   char* funkcje[100];
 
   int a=0;
@@ -92,6 +88,9 @@ void write()
     //free(arr[i].type);
     free(arr[i].inpname);
     free(arr[i].fun_name);
+  }
+  for(int i=0;i<a;i++){
+    free(funkcje[i]);
   }
 
 }
